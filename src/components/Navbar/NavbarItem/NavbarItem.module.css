@@ -1,0 +1,12 @@
+.navbar-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    flex-direction: column;
+}
