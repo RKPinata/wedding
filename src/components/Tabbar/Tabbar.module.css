@@ -1,0 +1,15 @@
+.tabbar-container {
+    background-color: var(--wisteria);
+    height: auto;
+    width: 100%;
+}
+
+.tabbar-items {
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabbar-button p {
+    margin: 0;
+}

@@ -1,4 +1,4 @@
-import { ContactItem } from "@/interfaces/navbarAndPopupInterface";
+import { ContactItem } from "@/interfaces/tabbarAndPopupInterface";
 import { Phone, WhatsappLogo } from "@phosphor-icons/react";
 
 export const CONTACT_DATA: ContactItem[] = [

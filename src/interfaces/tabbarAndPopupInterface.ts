@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface NavbarItem {
+export interface TabbarItem {
     title: string;
     logo: ReactNode;
 }

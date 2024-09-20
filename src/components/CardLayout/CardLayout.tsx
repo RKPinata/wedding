@@ -1,7 +1,7 @@
 import Arc from "../Arc/Arc";
-import styles from "./Layout.module.css";
+import styles from "./CardLayout.module.css";
 import Monogram from "../Monogram/Monogram";
-import Navbar from "../Navbar/Navbar";
+  import BottomOverlay from "../BottomOverlay/BottomOverlay";
 
 const Layout = () => {
   return (
@@ -14,8 +14,7 @@ const Layout = () => {
             <Arc />
             <Monogram />
           </div>
-
-          <Navbar />
+          <BottomOverlay />
         </div>
       </div>
     </div>

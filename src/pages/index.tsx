@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 
-import Layout from "@/components/Layout/Layout";
+import CardLayout from "@/components/CardLayout/CardLayout";
 
 // example fonts
 const geistSans = localFont({
@@ -23,7 +23,7 @@ const weddingFont = localFont({
 export default function Home() {
   return (
     <main className={`${weddingFont.variable}`}>
-      <Layout />
+      <CardLayout />
     </main>
   );
 }
