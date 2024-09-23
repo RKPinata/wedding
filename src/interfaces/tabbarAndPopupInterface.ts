@@ -3,11 +3,12 @@ import { ReactNode } from 'react';
 export interface TabbarItem {
     title: string;
     logo: ReactNode;
+    component?: ReactNode;
 }
 
 export interface ContactItem {
-    name: string;
     title: string;
+    name: string;
     whatsappLogo: ReactNode;
     phoneLogo: ReactNode;
 }
