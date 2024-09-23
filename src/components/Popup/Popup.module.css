@@ -1,11 +1,17 @@
 .popup-container {
+    position: absolute;
     background-color: var(--wisteria);
-    width: 95%;
     padding: 1%;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 0 auto;
+    margin: 4%;
+    bottom: 0;
+    width: 92%;
+    transform: translateY(-100px);
+    transition: transform 0.4s ease-in-out;
+    min-height: 200px;
 }
+
 
 .popup-title h2{
     font-size: 1.5rem;

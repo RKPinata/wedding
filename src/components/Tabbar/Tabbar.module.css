@@ -2,6 +2,7 @@
     background-color: var(--wisteria);
     height: auto;
     width: 100%;
+    z-index: 1000;
 }
 
 .tabbar-items {

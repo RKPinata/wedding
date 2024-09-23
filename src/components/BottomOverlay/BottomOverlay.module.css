@@ -1,5 +1,9 @@
 .bottom-overlay-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     bottom: 0;
 }
