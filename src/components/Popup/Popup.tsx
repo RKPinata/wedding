@@ -1,26 +1,16 @@
-import { CONTACT_DATA } from "@/data/POPUP_DATA";
+import { ReactNode } from "react";
 import styles from "./Popup.module.css";
-import { ContactItem } from "@/interfaces/tabbarAndPopupInterface";
 
-const Popup = () => {
+const Popup: React.FC<{ title: string | null, component: ReactNode }> = ({ title, component }) => {
   return (
     <div className={styles["popup-container"]}>
       <div className={styles["popup-items"]}>
         <div className={styles["popup-title"]}>
-          <h2>Contact</h2>
+          <h2>{title ? title : "No title selected"}</h2>
         </div>
-        {CONTACT_DATA.map((contactItem: ContactItem, index: number) => (
-          <div key={index} className={styles["contact-info"]}>
-            <div className={styles["name-and-title"]}>
-              <p>{contactItem.name}</p>
-              <small>{contactItem.title}</small>
-            </div>
-            <div className={styles["whatsapp-and-phone"]}>
-              {contactItem.whatsappLogo}
-              {contactItem.phoneLogo}
-            </div>
-          </div>
-        ))}
+        <div className={styles["popup-content"]}>
+          {component ? component : <p>No component to display</p>}
+        </div>
       </div>
     </div>
   );

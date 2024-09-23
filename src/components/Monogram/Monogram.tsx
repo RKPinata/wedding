@@ -6,7 +6,7 @@ const Monogram = () => {
   return (
     <div className={styles.monogramContainer}>
       <div className={styles.monogramItems}>
-        <div className={styles.separator}>
+        <div className={styles.monogram}>
           <Image src={monogram} alt="rose-stalk" />
         </div>
       </div>
