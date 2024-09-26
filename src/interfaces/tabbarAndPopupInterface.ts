@@ -18,9 +18,9 @@ export interface MusicItem {
 }
 
 export interface LocationItem {
-    qrCode: string;
     address: string;
-    copyButton: ReactNode;
+    mapsIcon: ReactNode;
+    wazeIcon: ReactNode;
 }
 
 export interface GiftItem {
@@ -29,6 +29,6 @@ export interface GiftItem {
 }
 
 export interface RsvpItem {
-    yes: ReactNode;
-    no: ReactNode;
+    icon: ReactNode;
+    status: string;
 }
