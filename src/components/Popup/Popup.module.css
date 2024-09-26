@@ -9,18 +9,11 @@
     width: 92%;
     transform: translateY(-100px);
     transition: transform 0.4s ease-in-out;
-    min-height: 200px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
 }
 
 
 .popup-title h2{
     font-size: 1.5rem;
     text-align: center;
-}
-
-.contact-info {
-    margin: 0 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
