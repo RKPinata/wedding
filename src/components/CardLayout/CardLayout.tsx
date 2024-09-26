@@ -2,6 +2,7 @@ import Arc from "../Arc/Arc";
 import styles from "./CardLayout.module.css";
 import Monogram from "../Monogram/Monogram";
 import BottomOverlay from "../BottomOverlay/BottomOverlay";
+import Music from "../Music/Music";
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
           <Arc />
           <Monogram />
           <BottomOverlay />
+          <Music />
         </div>
       </div>
     </div>

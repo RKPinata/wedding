@@ -1,0 +1,7 @@
+.rsvp-items {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px auto;
+    gap: 16px;
+    width: 90%;
+}

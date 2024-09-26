@@ -1,6 +1,6 @@
 import { CONTACT_DATA } from "@/data/POPUP_DATA";
 import { ContactItem } from "@/interfaces/tabbarAndPopupInterface";
-import styles from "../Popup.module.css";
+import styles from "./ContactPopup.module.css";
 
 const ContactPopup = () => {
     return (

@@ -4,12 +4,8 @@ const TabbarItem: React.FC<{
   logo: React.ReactNode;
   title: string;
 }> = ({ logo, title }) => {
-  const handleClick = () => {
-    console.log(title);
-  };
-
   return (
-    <button className={styles["tabbar-button"]} onClick={handleClick}>
+    <button className={styles["tabbar-button"]}>
       {logo}
       <p>{title}</p>
     </button>

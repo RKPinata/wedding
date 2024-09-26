@@ -8,8 +8,13 @@ const BottomOverlay = () => {
   const [selectedComponent, setSelectedComponent] = useState<ReactNode | null>(null);
 
   const handleSelect = (title: string, component: ReactNode) => {
-    setSelectedTitle(title);
-    setSelectedComponent(component);
+    if (selectedTitle === title) {
+      setSelectedTitle(null);
+      setSelectedComponent(null);
+    } else {
+      setSelectedTitle(title);
+      setSelectedComponent(component);
+    }
   };
 
   return (

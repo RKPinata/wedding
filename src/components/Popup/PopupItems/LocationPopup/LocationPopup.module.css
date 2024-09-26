@@ -1,0 +1,24 @@
+.location-popup-items p {
+    text-align: center;
+}
+
+.location-popup-buttons {
+    display: flex;
+}
+
+.location-popup-items button {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+    margin: 16px;
+}
+
+.location-popup-items button p{
+    margin-left: 0.5rem;
+}

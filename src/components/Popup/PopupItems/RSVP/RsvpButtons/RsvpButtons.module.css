@@ -1,0 +1,15 @@
+.rsvp-buttons {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+}
+
+.rsvp-container {
+    flex: 1;
+}
