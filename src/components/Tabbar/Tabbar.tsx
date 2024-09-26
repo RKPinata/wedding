@@ -1,16 +1,18 @@
 import styles from "./Tabbar.module.css";
 import { TabbarItem as TTabbarItem } from "@/interfaces/tabbarAndPopupInterface";
-import { Envelope, Gift, MapPin, MusicNotes, Phone } from "@phosphor-icons/react";
+import { Envelope, Gift, MapPin, Phone } from "@phosphor-icons/react";
 import TabbarItem from "./TabbarItem/TabbarItem";
-import ContactPopup from "../Popup/PopupItems/ContactPopup";
+import ContactPopup from "../Popup/PopupItems/ContactPopup/ContactPopup";
 import { ReactNode } from "react";
+import Rsvp from "../Popup/PopupItems/RSVP/Rsvp";
+import LocationPopup from "../Popup/PopupItems/LocationPopup/LocationPopup";
+import GiftPopup from "../Popup/PopupItems/GiftPopup/GiftPopup";
 
 const TABBAR_DATA: TTabbarItem[] = [
   { title: "Contact", logo: <Phone size={32} />, component: <ContactPopup /> },
-  { title: "Song", logo: <MusicNotes size={32} />, component: null },
-  { title: "Location", logo: <MapPin size={32} />, component: null },
-  { title: "Gift", logo: <Gift size={32} />, component: null },
-  { title: "RSVP", logo: <Envelope size={32} />, component: null },
+  { title: "Location", logo: <MapPin size={32} />, component: <LocationPopup /> },
+  { title: "Gift", logo: <Gift size={32} />, component: <GiftPopup /> },
+  { title: "RSVP", logo: <Envelope size={32} />, component: <Rsvp /> },
 ];
 
 const Tabbar: React.FC<{ onSelect: (title: string, component: ReactNode) => void }> = ({ onSelect }) => {
