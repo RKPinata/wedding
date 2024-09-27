@@ -3,12 +3,13 @@ import styles from './LocationPopup.module.css';
 import { faWaze } from '@fortawesome/free-brands-svg-icons';
 import { GoogleLogo } from '@phosphor-icons/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CopyableP from '@/components/CopyableP/CopyableP';
 
 const LOCATION_DATA: LocationItem[] = [
     {
-        address: "DEWAN IBU'KU ALIMAH TAMAN KLUANG PERDANA,KLUANG, JOHOR",
-        mapsIcon: <GoogleLogo  size={20} />,
-        wazeIcon: <FontAwesomeIcon icon={faWaze} size="lg"/>,
+        address: "Dewan Ibu'ku Alinah Taman Kluang Perdana, Kluang, Johor",
+        mapsIcon: <GoogleLogo size={20} />,
+        wazeIcon: <FontAwesomeIcon icon={faWaze} size="lg" />,
     }
 ];
 
@@ -19,7 +20,9 @@ const LocationPopup: React.FC = () => {
                 <div
                     className={styles["location-popup-items"]}
                     key={index}>
-                    <p>{item.address}</p>
+                    <div className={styles["location-address"]}>
+                        <CopyableP copyableText={item.address} />
+                    </div>
                     <div className={styles["location-popup-buttons"]}>
                         <button>
                             {item.mapsIcon}
