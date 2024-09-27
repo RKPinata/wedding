@@ -1,6 +1,6 @@
 .popup-container {
     position: absolute;
-    background-color: var(--wisteria);
+    background-color: rgba(201, 160, 220, 0.8);
     padding: 1%;
     border-radius: 20px;
     backdrop-filter: blur(10px);
