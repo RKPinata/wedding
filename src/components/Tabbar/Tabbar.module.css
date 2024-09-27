@@ -9,7 +9,7 @@
 .tabbar-items {
     padding-top: 0.8rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .tabbar-button p {
