@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LOCATION_DATA: LocationItem[] = [
     {
-        address: "298, Jln Haji Manan, Taman Lian Seng, 86000 Kluang, Johor",
+        address: "DEWAN IBU'KU ALIMAH TAMAN KLUANG PERDANA,KLUANG, JOHOR",
         mapsIcon: <GoogleLogo  size={20} />,
         wazeIcon: <FontAwesomeIcon icon={faWaze} size="lg"/>,
     }
