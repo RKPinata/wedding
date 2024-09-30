@@ -4,7 +4,7 @@ import Monogram from "../Monogram/Monogram";
 import BottomOverlay from "../BottomOverlay/BottomOverlay";
 // import Music from "../Music/Music";
 
-const Layout = () => {
+const Layout: React.FC = () => {
   return (
     <div className={styles["page-wrapper"]}>
       <div className={styles["layout-container"]}>
