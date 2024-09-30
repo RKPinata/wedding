@@ -1,28 +1,21 @@
 import localFont from "next/font/local";
-
 import CardLayout from "@/components/CardLayout/CardLayout";
 
-// example fonts
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
-const weddingFont = localFont({
-  src: "./fonts/theweddingsignatureregular-bwz55.ttf",
-  variable: "--font-wedding",
+const playfairDisplay = localFont({
+  src: "./fonts/PlayfairDisplay-VariableFont_wght.ttf",
+  variable: "--playfai-display",
   weight: "400",
-});
+})
+
+// const weddingFont = localFont({
+//   src: "./fonts/theweddingsignatureregular-bwz55.ttf",
+//   variable: "--font-wedding",
+//   weight: "400",
+// });
 
 export default function Home() {
   return (
-    <main className={`${weddingFont.variable}`}>
+    <main className={`${playfairDisplay.variable}`}>
       <CardLayout />
     </main>
   );

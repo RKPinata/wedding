@@ -145,9 +145,7 @@ table {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Spartan", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  font-family: var(--playfair-display), serif;
   line-height: 1.5;
   font-weight: 400;
 
