@@ -13,6 +13,20 @@ const LOCATION_DATA: LocationItem[] = [
     }
 ];
 
+// Function to open Google Maps with a given address
+const openGoogleMaps = (address: string) => {
+    const query = encodeURIComponent(address);
+    const url = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    window.open(url, '_blank');
+}
+
+// Function to open Waze with a given address
+const openWaze = (address: string) => {
+    const query = encodeURIComponent(address);
+    const url = `https://waze.com/ul?q=${query}`;
+    window.open(url, '_blank');
+}
+
 const LocationPopup: React.FC = () => {
     return (
         <div className={styles["location-popup-container"]}>
@@ -24,11 +38,11 @@ const LocationPopup: React.FC = () => {
                         <CopyableP copyableText={item.address} />
                     </div>
                     <div className={styles["location-popup-buttons"]}>
-                        <button>
+                        <button onClick={() => openGoogleMaps(item.address)}>
                             {item.mapsIcon}
                             <p>Maps</p>
                         </button>
-                        <button>
+                        <button onClick={() => openWaze(item.address)}>
                             {item.wazeIcon}
                             <p>Waze</p>
                         </button>
