@@ -7,10 +7,11 @@ export interface TabbarItem {
 }
 
 export interface ContactItem {
-    title: string;
     name: string;
+    relation: string;
     whatsappLogo: ReactNode;
     phoneLogo: ReactNode;
+    phoneNumber: string;
 }
 
 export interface MusicItem {

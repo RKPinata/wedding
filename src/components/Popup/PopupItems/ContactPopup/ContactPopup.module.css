@@ -1,6 +1,12 @@
-.contact-info {
-    margin: 0 10px 10px;
+.contact-row {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.contact-name-and-relation p:nth-child(1){
+    font-weight: bold;
+    font-size: 1.1rem;
 }
