@@ -1,3 +1,25 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(270px);
+        opacity: 0.3;
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(270px);
+        opacity: 0.3;
+    }
+}
+
 .popup-container {
     position: absolute;
     background-color: rgba(201, 160, 220, 0.8);
@@ -7,13 +29,19 @@
     margin: 4%;
     bottom: 0;
     width: 92%;
-    transform: translateY(-100px);
-    transition: transform 0.4s ease-in-out;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
 }
 
+.popup-container.open {
+    animation: slideIn 0.4s ease-in-out forwards;
+}
 
-.popup-title h2{
+.popup-container.close {
+    animation: slideOut 0.4s ease-in-out forwards;
+}
+
+.popup-title h2 {
     font-size: 1.5rem;
     text-align: center;
     margin: 1.2rem 0;
