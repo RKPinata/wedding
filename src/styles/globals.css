@@ -220,15 +220,25 @@ button:focus-visible {
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('/public/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+  src: url('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Gladis';
-  src: url('/public/fonts/Gladis.ttf');
+  src: url('/fonts/Gladis.ttf');
 }
 
 @font-face {
   font-family: 'BP Black White';
-  src: url('/public/fonts/BPBlackWhite-Regular.ttf');
+  src: url('/fonts/BPBlackWhite-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Meie Script';
+  src: url('/fonts/MeieScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Madjestic Comfort Serif';
+  src: url('/fonts/MadjesticComfortSerif-JROrB.ttf');
 }
