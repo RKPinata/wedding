@@ -1,0 +1,16 @@
+.day {
+    margin: 16px auto;
+}
+
+.day p {
+    font-weight: 700;
+}
+
+.address {
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.address p {
+    letter-spacing: 2px;
+}
