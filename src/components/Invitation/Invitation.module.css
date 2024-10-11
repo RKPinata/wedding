@@ -10,7 +10,7 @@
 }
 
 .greeting {
-margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .parent-names {
@@ -28,22 +28,27 @@ margin-bottom: 2rem;
 }
 
 .couple-name {
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
 }
 
-.couple-name p:nth-of-type(2){
+.couple-name p:nth-of-type(2) {
     margin: 1.8rem 1rem auto;
 }
 
-.location {
-    margin-bottom: 1rem;
-}
-
-.date {
-    margin-bottom: 1rem;
-}
-
+.location,
+.date,
 .time {
     margin-bottom: 1rem;
+}
+
+.location-date-time {
+    padding: 1rem;
+    margin: 0 3rem;
+    border-radius: 20px;
+    box-shadow: inset 3px 3px 5px rgba(0,0,0,0.2),
+                inset -3px -3px 5px rgba(0,0,0,0.2),
+                3px 3px 5px rgba(255,255,255,0.8),
+                -3px -3px 5px rgba(255,255,255,0.8);
+    background-color: var(--soft-lilac);
 }
