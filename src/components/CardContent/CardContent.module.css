@@ -1,6 +1,7 @@
 .card-content-container {
     position: relative;
     margin-top: -200px;
+    margin-bottom: 100px;
 }
 
 .day p{
