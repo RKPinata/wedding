@@ -4,7 +4,7 @@ interface TypographyProps {
     color?: string;
     align?: 'left' | 'center' | 'right';
     font?: 'Playfair Display' | 'Gladis' | 'BP Black White' | 'Meie Script' | 'Madjestic Comfort Serif';
-    fontSize?: number;
+    fontSize?: string;
     fontWeight?: number;
     children: React.ReactNode;
 }
