@@ -243,3 +243,8 @@ button:focus-visible {
   font-family: 'Madjestic Comfort Serif';
   src: url('/fonts/MadjesticComfortSerif-JROrB.ttf');
 }
+
+@font-face {
+  font-family: 'Kathya Script';
+  src: url('/fonts/Kathya Script.ttf');
+}
