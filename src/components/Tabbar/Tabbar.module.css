@@ -1,5 +1,6 @@
 .tabbar-container {
-    background-color: var(--wisteria);
+    background-color: rgba(201, 160, 220, 0.8);
+    backdrop-filter: blur(10px);
     height: auto;
     width: 100%;
     z-index: 1000;
