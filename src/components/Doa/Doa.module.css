@@ -1,0 +1,20 @@
+.doa-container {
+    margin-top: 3rem;
+}
+
+.flower-divider-top, .flower-divider-bottom {
+    text-align: center;
+}
+
+.flower-divider-top img {
+    width: 75%;
+}
+
+.flower-divider-bottom img {
+    width: 75%;
+    transform: rotate(180deg);
+}
+
+.doa-text p {
+    padding: 0 2rem;
+}
