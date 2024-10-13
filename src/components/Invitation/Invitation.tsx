@@ -65,9 +65,15 @@ const Invitation: React.FC = () => {
           {invitationData.greetingLine4 && <p>{invitationData.greetingLine4}</p>}
         </div>
         <div className={Styles['couple-name']}>
-          <Typography font='BP Black White'>{invitationData.name1}</Typography>
-          <Typography>dengan pasangannya</Typography>
-          <Typography font='BP Black White'>{invitationData.name2}</Typography>
+          <div className={Styles["name-one"]}>
+            <Typography font='BP Black White'>{invitationData.name1}</Typography>
+          </div>
+          <div className={Styles["dengan-pasangannya"]}>
+            <Typography>dengan pasangannya</Typography>
+          </div>
+          <div className={Styles["name-two"]}>
+            <Typography font='BP Black White'>{invitationData.name2}</Typography>
+          </div>
         </div>
         <div className={Styles['location-date-time']}>
           <div className={Styles["location"]}>

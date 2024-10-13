@@ -30,12 +30,8 @@
 .couple-name {
     margin-top: 2rem;
     margin-bottom: 3.5rem;
-    line-height: 1.5;
 }
 
-.couple-name > *:nth-child(1) {
-    margin-bottom: 1.5rem;
-}
 
 .location,
 .date,
