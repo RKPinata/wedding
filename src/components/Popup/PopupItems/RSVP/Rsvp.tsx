@@ -1,30 +1,38 @@
-import { RsvpItem } from "@/interfaces/tabbarAndPopupInterface";
+import React, { useState } from 'react';
 import { Check, X } from "@phosphor-icons/react";
-import RsvpButtons from "./RsvpButtons/RsvpButtons";
-import styles from "./Rsvp.module.css";
-
-
-const RSVP_DATA: RsvpItem[] = [
-    {
-        icon: <Check size={20} />,
-        status: "Attending",
-    },
-    {
-        icon: <X size={20} />,
-        status: "Not Attending",
-    },
-];
+import Styles from "./Rsvp.module.css";
+import RsvpForm from "./RsvpForm/RsvpForm";
+import PrimaryButton from '@/components/PrimaryButton/PrimaryButton';
 
 const Rsvp: React.FC = () => {
-    return (
-        <div className={styles["rsvp-container"]}>
-            <div className={styles["rsvp-items"]}>
-                {RSVP_DATA.map((item, index) => (
-                    <RsvpButtons key={index} icon={item.icon} status={item.status} />
-                ))}
-            </div>
+  const [isAttending, setIsAttending] = useState<boolean | null>(null);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAttendanceChange = (attending: boolean) => {
+    setIsAttending(attending);
+    setShowForm(true);
+  };
+
+  return (
+    <div className={Styles["rsvp-container"]}>
+      {!showForm ? (
+        <div className={Styles["buttons-container"]}>
+          <PrimaryButton
+            icon={<Check size={20} />}
+            text="Attending"
+            onClick={() => handleAttendanceChange(true)}
+          />
+          <PrimaryButton
+            icon={<X size={20} />}
+            text="Not Attending"
+            onClick={() => handleAttendanceChange(false)}
+          />
         </div>
-    );
+      ) : (
+        <RsvpForm isAttending={isAttending} onCancel={() => setShowForm(false)} />
+      )}
+    </div>
+  );
 };
 
 export default Rsvp;
