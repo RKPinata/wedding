@@ -1,0 +1,31 @@
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 5%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 140px;
+  height: 40px;
+}
+
+.primary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.primary-button.selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  margin-top: 4px;
+}
+
+.text {
+  white-space: nowrap;
+}
