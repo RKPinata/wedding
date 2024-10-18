@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Typography from '../Typography/Typography';
 import Styles from './Wishes.module.css';
-import { supabase } from '@/utils/supabaseClient';  // Adjust the import if necessary
+import { supabase } from '@/utils/supabaseClient';
 
 interface MessageType {
     message: string;
     name: string;
+}
+
+// Define a type for Supabase errors
+interface SupabaseError {
+    message: string;
+    details: string;
+    hint: string;
+    code: string;
 }
 
 const Wishes: React.FC = () => {
@@ -13,7 +21,6 @@ const Wishes: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Fetch messages from the database when the component mounts
     useEffect(() => {
         const fetchMessages = async () => {
             try {
@@ -23,10 +30,20 @@ const Wishes: React.FC = () => {
 
                 if (error) throw error;
 
-                setMessages(data);
-            } catch (error: any) {
-                console.error('Error fetching messages:', error.message);
-                setError('Failed to load messages.');
+                setMessages(data || []);
+            } catch (error: unknown) {
+                // Type guard to handle different error types
+                if (error instanceof Error) {
+                    console.error('Error fetching messages:', error.message);
+                    setError(error.message);
+                } else if (typeof error === 'object' && error !== null) {
+                    const supabaseError = error as SupabaseError;
+                    console.error('Supabase error:', supabaseError.message);
+                    setError(supabaseError.message);
+                } else {
+                    console.error('Unknown error occurred');
+                    setError('An unknown error occurred');
+                }
             } finally {
                 setLoading(false);
             }
