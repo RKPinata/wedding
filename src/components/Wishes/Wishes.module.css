@@ -1,0 +1,20 @@
+.wishes-container {
+    margin-top: 2rem;
+    margin-bottom: 150px;
+}
+
+.wishes-area {
+    margin: 0 2rem;
+    height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.wishes-area::-webkit-scrollbar { 
+    display: none;
+}
+
+.wish-items {
+    margin: 1rem 0;
+}
