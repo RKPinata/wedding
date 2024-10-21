@@ -5,7 +5,7 @@
 
 .wishes-area {
     margin: 0 2rem;
-    height: 300px;
+    height: auto;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
