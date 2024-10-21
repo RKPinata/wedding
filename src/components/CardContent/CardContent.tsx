@@ -4,6 +4,7 @@ import Styles from './CardContent.module.css'
 import Tentative from '../Tentative/Tentative';
 import Doa from '../Doa/Doa';
 import Wishes from '../Wishes/Wishes';
+import Music from '../Music/Music';
 
 const CardContent: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const CardContent: React.FC = () => {
                 <Tentative />
                 <Doa />
                 <Wishes />
+                <Music />
             </div>
         </div>
     )
