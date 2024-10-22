@@ -3,7 +3,7 @@ import Arc from "../Arc/Arc";
 import Styles from "./CardLayout.module.css";
 import BottomOverlay from "../BottomOverlay/BottomOverlay";
 import CardContent from "../CardContent/CardContent";
-import monogram from '@/assets/images/monogram.png'
+import monogram from '@/assets/images/monogram.png';
 import Image from "next/image";
 import Typography from "../Typography/Typography";
 
@@ -11,9 +11,11 @@ const CardLayout: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isScrollable, setIsScrollable] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false); // Add music playing state
 
   const handleClick = () => {
     setIsAnimating(true);
+    setIsMusicPlaying(true); // Set music to play when the button is clicked
   };
 
   const handleAnimationEnd = () => {
@@ -29,7 +31,7 @@ const CardLayout: React.FC = () => {
         <div className={Styles["layout-container"]}>
           <div className={Styles["layout-area"]}>
             <Arc />
-            <CardContent />       
+            <CardContent isMusicPlaying={isMusicPlaying} />  {/* Pass the music state */}
             <BottomOverlay />
           </div>
         </div>
@@ -63,7 +65,7 @@ const CardLayout: React.FC = () => {
         </div>
         <div className={Styles["layout-area"]}>
           <Arc />
-          <CardContent />       
+          <CardContent isMusicPlaying={isMusicPlaying} />  {/* Pass the music state */}
           <BottomOverlay />
         </div>
       </div>
