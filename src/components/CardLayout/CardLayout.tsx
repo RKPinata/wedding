@@ -1,13 +1,28 @@
 import Arc from "../Arc/Arc";
-import styles from "./CardLayout.module.css";
+import Styles from "./CardLayout.module.css";
 import BottomOverlay from "../BottomOverlay/BottomOverlay";
 import CardContent from "../CardContent/CardContent";
+import monogram from '@/assets/images/monogram.png'
+import Image from "next/image";
+import Typography from "../Typography/Typography";
 
-const Layout: React.FC = () => {
+const CardLayout: React.FC = () => {
   return (
-    <div className={styles["page-wrapper"]}>
-      <div className={styles["layout-container"]}>
-        <div className={styles["layout-area"]}>
+    <div className={Styles["page-wrapper"]}>
+      <div className={Styles["layout-container"]}>
+        <div className={Styles["overlay"]}>
+          <div className={Styles["overlay-image"]}>
+            <button>
+              <Image src={monogram} alt={"name-monogram"}/>            
+            </button>
+          </div>
+          <div className={Styles["overlay-text"]}>
+            <Typography>
+              Click to open
+            </Typography>
+          </div>
+        </div>
+        <div className={Styles["layout-area"]}>
           <Arc />
           <CardContent />       
           <BottomOverlay />
@@ -17,4 +32,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export default Layout;
+export default CardLayout;
