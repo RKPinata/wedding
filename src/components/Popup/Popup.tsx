@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useState } from "react";
-import styles from "./Popup.module.css";
+import Styles from "./Popup.module.css";
 
 const Popup: React.FC<{ title: string; component: ReactNode; isOpen: boolean }> = ({ title, component, isOpen }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,12 +15,12 @@ const Popup: React.FC<{ title: string; component: ReactNode; isOpen: boolean }> 
   if (!isVisible && !isOpen) return null;
 
   return (
-    <div className={`${styles["popup-container"]} ${isOpen ? styles["open"] : styles["close"]}`}>
-      <div className={styles["popup-items"]}>
-        <div className={styles["popup-title"]}>
+    <div className={`${Styles["popup-container"]} ${isOpen ? styles["open"] : styles["close"]}`}>
+      <div className={Styles["popup-items"]}>
+        <div className={Styles["popup-title"]}>
           <h2>{title}</h2>
         </div>
-        <div className={styles["popup-content"]}>{component}</div>
+        <div className={Styles["popup-content"]}>{component}</div>
       </div>
     </div>
   );

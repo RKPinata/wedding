@@ -1,12 +1,12 @@
-import styles from "./Monogram.module.css";
+import Styles from "./Monogram.module.css";
 import Image from 'next/image';
 import monogram from "../../assets/images/monogram.png";
 
 const Monogram = () => {
   return (
-    <div className={styles.monogramContainer}>
-      <div className={styles.monogramItems}>
-        <div className={styles.monogram}>
+    <div className={Styles.monogramContainer}>
+      <div className={Styles.monogramItems}>
+        <div className={Styles.monogram}>
           <Image src={monogram} alt="rose-stalk" />
         </div>
       </div>

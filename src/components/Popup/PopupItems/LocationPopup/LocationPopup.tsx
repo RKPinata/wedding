@@ -1,5 +1,5 @@
 import { LocationItem } from '@/interfaces/tabbarAndPopupInterface';
-import styles from './LocationPopup.module.css';
+import Styles from './LocationPopup.module.css';
 import { faWaze } from '@fortawesome/free-brands-svg-icons';
 import { GoogleLogo } from '@phosphor-icons/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,15 +29,15 @@ const openWaze = (address: string) => {
 
 const LocationPopup: React.FC = () => {
     return (
-        <div className={styles["location-popup-container"]}>
+        <div className={Styles["location-popup-container"]}>
             {LOCATION_DATA.map((item, index) => (
                 <div
-                    className={styles["location-popup-items"]}
+                    className={Styles["location-popup-items"]}
                     key={index}>
-                    <div className={styles["location-address"]}>
+                    <div className={Styles["location-address"]}>
                         <CopyableP copyableText={item.address} />
                     </div>
-                    <div className={styles["location-popup-buttons"]}>
+                    <div className={Styles["location-popup-buttons"]}>
                         <button onClick={() => openGoogleMaps(item.address)}>
                             {item.mapsIcon}
                             <p>Maps</p>

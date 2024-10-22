@@ -1,4 +1,4 @@
-import styles from './Mailing.module.css';
+import Styles from './Mailing.module.css';
 
 interface MailingInfo {
     name?: string;
@@ -32,7 +32,7 @@ const Mailing: React.FC = () => {
             {
                 MAILING_DATA.map((item, index) => (
                     <div 
-                        className={styles["mailing-text"]}
+                        className={Styles["mailing-text"]}
                         key={index}
                         onClick={() => handleCopy(item)}
                         style={{ cursor: 'pointer' }}

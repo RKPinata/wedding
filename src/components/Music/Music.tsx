@@ -1,9 +1,9 @@
-import styles from './Music.module.css';
+import Styles from './Music.module.css';
 
 const Music = () => {
     return (
-        <div className={styles["music-container"]}>
-            <div className={styles["music"]}>
+        <div className={Styles["music-container"]}>
+            <div className={Styles["music"]}>
                 <iframe 
                     width="auto" 
                     height="auto" 

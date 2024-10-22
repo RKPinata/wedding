@@ -1,4 +1,4 @@
-import styles from "./Tabbar.module.css";
+import Styles from "./Tabbar.module.css";
 import { TabbarItem as TTabbarItem } from "@/interfaces/tabbarAndPopupInterface";
 import { Envelope, Gift, MapPin, Phone } from "@phosphor-icons/react";
 import TabbarItem from "./TabbarItem/TabbarItem";
@@ -17,8 +17,8 @@ const TABBAR_DATA: TTabbarItem[] = [
 
 const Tabbar: React.FC<{ onSelect: (title: string, component: ReactNode) => void }> = ({ onSelect }) => {
   return (
-    <div className={styles["tabbar-container"]}>
-      <div className={styles["tabbar-items"]}>
+    <div className={Styles["tabbar-container"]}>
+      <div className={Styles["tabbar-items"]}>
         {TABBAR_DATA.map((tabbarItem: TTabbarItem) => (
           <div
             key={tabbarItem.title}

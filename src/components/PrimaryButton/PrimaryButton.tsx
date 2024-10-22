@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PrimaryButton.module.css';
+import Styles from './PrimaryButton.module.css';
 
 interface PrimaryButtonProps {
   icon?: React.ReactNode;
@@ -20,13 +20,13 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 }) => {
   return (
     <button 
-      className={`${styles["primary-button"]} ${isSelected ? styles["selected"] : ''}`}
+      className={`${Styles["primary-button"]} ${isSelected ? styles["selected"] : ''}`}
       onClick={onClick}
       type={type}
       disabled={disabled}
     >
-      {icon && <span className={styles["icon"]}>{icon}</span>}
-      <span className={styles["text"]}>{text}</span>
+      {icon && <span className={Styles["icon"]}>{icon}</span>}
+      <span className={Styles["text"]}>{text}</span>
     </button>
   );
 };

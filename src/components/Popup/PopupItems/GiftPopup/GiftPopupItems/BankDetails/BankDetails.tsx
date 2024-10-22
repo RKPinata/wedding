@@ -1,7 +1,7 @@
 import CopyableP from "@/components/CopyableP/CopyableP";
 import Image, { StaticImageData } from 'next/image';
 import MaybankLogo from '@/assets/images/maybank_logo.png';
-import styles from './BankDetails.module.css'
+import Styles from './BankDetails.module.css'
 
 interface BankDetails {
     bankLogo: StaticImageData,
@@ -21,7 +21,7 @@ const BankDetails: React.FC = () => {
     const { bankLogo, bankName, bearerName, bankDetails: BankDetailsComponent } = BANK_DETAILS_DATA;
 
     return (
-        <div className={styles["bank-details-items"]}>
+        <div className={Styles["bank-details-items"]}>
             <p
             style={{ display: 'flex', alignItems: 'center' }}
             >

@@ -1,4 +1,4 @@
-import styles from "./ContactPopup.module.css";
+import Styles from "./ContactPopup.module.css";
 import { WhatsappLogo, Phone } from "@phosphor-icons/react";
 import { ContactItem } from "@/interfaces/tabbarAndPopupInterface";
 
@@ -36,14 +36,14 @@ export const CONTACT_DATA: ContactItem[] = [
 
 const ContactPopup = () => {
   return (
-    <div className={styles["contact-info"]}>
+    <div className={Styles["contact-info"]}>
       {CONTACT_DATA.map((contact, index) => (
-        <div key={index} className={styles["contact-row"]}>
-          <div className={styles["contact-name-and-relation"]}>
+        <div key={index} className={Styles["contact-row"]}>
+          <div className={Styles["contact-name-and-relation"]}>
             <p>{contact.name}</p>
             <p>{contact.relation}</p>
           </div>
-          <div className={styles.iconGroup}>
+          <div className={Styles.iconGroup}>
             <a
               href={`https://wa.me/${contact.phoneNumber.replace('+', '')}`}
               target="_blank"
