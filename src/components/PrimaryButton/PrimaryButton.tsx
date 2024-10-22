@@ -20,7 +20,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 }) => {
   return (
     <button 
-      className={`${Styles["primary-button"]} ${isSelected ? styles["selected"] : ''}`}
+      className={`${Styles["primary-button"]} ${isSelected ? Styles["selected"] : ''}`}
       onClick={onClick}
       type={type}
       disabled={disabled}

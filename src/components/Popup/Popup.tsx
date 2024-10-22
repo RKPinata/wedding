@@ -15,7 +15,7 @@ const Popup: React.FC<{ title: string; component: ReactNode; isOpen: boolean }> 
   if (!isVisible && !isOpen) return null;
 
   return (
-    <div className={`${Styles["popup-container"]} ${isOpen ? styles["open"] : styles["close"]}`}>
+    <div className={`${Styles["popup-container"]} ${isOpen ? Styles["open"] : Styles["close"]}`}>
       <div className={Styles["popup-items"]}>
         <div className={Styles["popup-title"]}>
           <h2>{title}</h2>
