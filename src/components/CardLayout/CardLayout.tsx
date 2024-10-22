@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Arc from "../Arc/Arc";
 import Styles from "./CardLayout.module.css";
 import BottomOverlay from "../BottomOverlay/BottomOverlay";
@@ -7,13 +8,51 @@ import Image from "next/image";
 import Typography from "../Typography/Typography";
 
 const CardLayout: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isScrollable, setIsScrollable] = useState(false);
+
+  const handleClick = () => {
+    setIsAnimating(true);
+  };
+
+  const handleAnimationEnd = () => {
+    setIsScrollable(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 500);
+  };
+
+  if (!isVisible) {
+    return (
+      <div className={`${Styles["page-wrapper"]} ${Styles["scrollable"]}`}>
+        <div className={Styles["layout-container"]}>
+          <div className={Styles["layout-area"]}>
+            <Arc />
+            <CardContent />       
+            <BottomOverlay />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className={Styles["page-wrapper"]}>
+    <div className={`${Styles["page-wrapper"]} ${isScrollable ? Styles["make-scrollable"] : ""}`}>
       <div className={Styles["layout-container"]}>
-        <div className={Styles["overlay"]}>
+        <div 
+          className={`${Styles["overlay"]} ${isAnimating ? Styles["fade-out"] : ''}`}
+          onAnimationEnd={handleAnimationEnd}
+        >
           <div className={Styles["overlay-image"]}>
-            <button>
-              <Image src={monogram} alt={"name-monogram"}/>            
+            <button onClick={handleClick}>
+              <Image 
+                src={monogram} 
+                alt={"name-monogram"}
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+              />            
             </button>
           </div>
           <div className={Styles["overlay-text"]}>
