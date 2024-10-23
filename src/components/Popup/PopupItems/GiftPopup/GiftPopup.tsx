@@ -1,4 +1,3 @@
-import { ClipboardText } from '@phosphor-icons/react';
 import Styles from './GiftPopup.module.css'
 import BankDetails from './GiftPopupItems/BankDetails/BankDetails';
 import Mailing from './GiftPopupItems/Mailing/Mailing';
