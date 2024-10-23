@@ -1,7 +1,14 @@
 .bank-details-container, .mailing-address-container {
+    position: relative;
     background: hsla(0, 0%, 100%, 0.3);
     border-radius: 10px;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1.2rem;
+}
+
+.bank-details-container svg, .mailing-address-container svg {
+    position: absolute;
+    top: 16px;
+    right: 16px;
 }

@@ -2,14 +2,6 @@
     text-align: center;
 }
 
-.location-address {
-    background: hsla(0, 0%, 100%, 0.3);
-    border-radius: 10px;
-    padding: 5% 20%;
-    width: 90%;
-    margin: 0 auto;
-}
-
 .location-address:hover {
     cursor: pointer;
 }

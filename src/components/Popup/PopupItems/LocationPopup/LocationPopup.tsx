@@ -1,9 +1,10 @@
 import { LocationItem } from '@/interfaces/tabbarAndPopupInterface';
 import Styles from './LocationPopup.module.css';
 import { faWaze } from '@fortawesome/free-brands-svg-icons';
-import { GoogleLogo } from '@phosphor-icons/react';
+import { ClipboardText, GoogleLogo } from '@phosphor-icons/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CopyableP from '@/components/CopyableP/CopyableP';
+import CopyableDiv from '@/components/CopyableDiv/CopyableDiv';
 
 const LOCATION_DATA: LocationItem[] = [
     {
@@ -34,9 +35,9 @@ const LocationPopup: React.FC = () => {
                 <div
                     className={Styles["location-popup-items"]}
                     key={index}>
-                    <div className={Styles["location-address"]}>
+                    <CopyableDiv>
                         <CopyableP copyableText={item.address} />
-                    </div>
+                    </CopyableDiv>
                     <div className={Styles["location-popup-buttons"]}>
                         <button onClick={() => openGoogleMaps(item.address)}>
                             {item.mapsIcon}

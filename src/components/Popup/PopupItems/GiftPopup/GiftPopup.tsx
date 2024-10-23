@@ -1,17 +1,19 @@
+import { ClipboardText } from '@phosphor-icons/react';
 import Styles from './GiftPopup.module.css'
 import BankDetails from './GiftPopupItems/BankDetails/BankDetails';
 import Mailing from './GiftPopupItems/Mailing/Mailing';
+import CopyableDiv from '@/components/CopyableDiv/CopyableDiv';
 
 const GiftPopup: React.FC = () => {
     return (
         <div className={Styles["gift-popup-container"]}>
             <div className="gift-popup-items">
-                <div className={Styles["bank-details-container"]}>
+                <CopyableDiv>
                     <Mailing />
-                </div>
-                <div className={Styles["mailing-address-container"]}>
+                </CopyableDiv>
+                <CopyableDiv>
                     <BankDetails />
-                </div>
+                </CopyableDiv>
             </div>
         </div>
     )
