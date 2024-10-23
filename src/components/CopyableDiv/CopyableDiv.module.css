@@ -1,0 +1,20 @@
+.copyable-container {
+    position: relative;
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 20%;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.copyable-container svg {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
