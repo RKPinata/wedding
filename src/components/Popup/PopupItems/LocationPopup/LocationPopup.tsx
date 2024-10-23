@@ -1,7 +1,7 @@
 import { LocationItem } from '@/interfaces/tabbarAndPopupInterface';
 import Styles from './LocationPopup.module.css';
 import { faWaze } from '@fortawesome/free-brands-svg-icons';
-import { ClipboardText, GoogleLogo } from '@phosphor-icons/react';
+import { GoogleLogo } from '@phosphor-icons/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CopyableP from '@/components/CopyableP/CopyableP';
 import CopyableDiv from '@/components/CopyableDiv/CopyableDiv';
