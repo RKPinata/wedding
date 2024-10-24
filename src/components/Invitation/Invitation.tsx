@@ -14,12 +14,6 @@ interface InvitationDataType {
   greetingLine4?: string;
   name1: string;
   name2: string;
-  addressLine1: string;
-  addressLine2?: string;
-  addressLine3?: string;
-  addressLine4?: string;
-  date: string;
-  time: string;
 }
 
 const INVITATION_DATA: InvitationDataType[] = [
@@ -32,13 +26,7 @@ const INVITATION_DATA: InvitationDataType[] = [
     greetingLine3: "Dato' | Datin | Tuan | Puan | Encik | Cik",
     greetingLine4: 'ke majlis perkahwinan puteri kami yang dikasihi',
     name1: 'Nurul Izzah Binti Malek',
-    name2: 'Ryan Iskandar Bin Afrizal Anwar ',
-    addressLine1: "Dewan Ibu'ku Alimah,",
-    addressLine2: 'No. 43, Jalan Perdana,',
-    addressLine3: 'Jalan Lingkaran Tengah',
-    addressLine4: 'Taman Kluang Perdana,',
-    date: 'Sabtu, 11 Januari 2025',
-    time: '11:00AM - 4:00PM',
+    name2: 'Ryan Iskandar Bin Afrizal Anwar '
   }
 ]
 
@@ -68,23 +56,6 @@ const Invitation: React.FC = () => {
           <Typography font='BP Black White'>{invitationData.name1}</Typography>
           <Typography font='BP Black White' className={Styles["dengan-pasangannya"]}>dengan pasangannya</Typography>
           <Typography font='BP Black White'>{invitationData.name2}</Typography>
-        </div>
-        <div className={Styles['location-date-time']}>
-          <div className={Styles["location"]}>
-            <h3>Tempat</h3>
-            <p>{invitationData.addressLine1}</p>
-            {invitationData.addressLine2 && <p>{invitationData.addressLine2}</p>}
-            {invitationData.addressLine3 && <p>{invitationData.addressLine3}</p>}
-            {invitationData.addressLine4 && <p>{invitationData.addressLine4}</p>}
-          </div>
-          <div className={Styles["date"]}>
-            <h3>Tarikh</h3>
-            <p>{invitationData.date}</p>
-          </div>
-          <div className={Styles["time"]}>
-            <h3>Masa</h3>
-            <p>{invitationData.time}</p>
-          </div>
         </div>
       </div>
     </div>
