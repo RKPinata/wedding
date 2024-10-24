@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from 'react';
 import Welcome from '../Welcome/Welcome';
 import Invitation from '../Invitation/Invitation';
 import Styles from './CardContent.module.css';
@@ -6,7 +7,6 @@ import Doa from '../Doa/Doa';
 import Wishes from '../Wishes/Wishes';
 import Music from '../Music/Music';
 import Info from '../Info/Info';
-import { useRef, useEffect } from 'react';
 
 interface CardContentProps {
     isMusicPlaying: boolean;  // Accept the music playing state as a prop
@@ -70,7 +70,8 @@ const CardContent: React.FC<CardContentProps> = ({ isMusicPlaying }) => {
                 <div className={`${Styles["wishes-wrapper"]} ${Styles["content-item"]} ${Styles["initially-hidden"]}`}>
                     <Wishes />
                 </div>
-                {isMusicPlaying && <Music />}
+                {/* Only render the Music component if isMusicPlaying is true */}
+                {isMusicPlaying && <Music isMusicPlaying={isMusicPlaying} />}
             </div>
         </div>
     );

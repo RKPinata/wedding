@@ -1,37 +1,29 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Styles from './Music.module.css';
 
-const Music = () => {
-    const iframeRef = useRef<HTMLIFrameElement>(null);
+interface MusicProps {
+    isMusicPlaying: boolean;  // Accept the music playing state as a prop
+}
+
+const Music: React.FC<MusicProps> = ({ isMusicPlaying }) => {
+    const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
-        const unmuteVideo = () => {
-            if (iframeRef.current?.contentWindow) {
-                iframeRef.current.contentWindow.postMessage(
-                    '{"event":"command","func":"unMute","args":""}',
-                    '*'
-                );
-            }
-        };
-
-        const timeoutId = setTimeout(unmuteVideo, 1000);
-
-        return () => clearTimeout(timeoutId);
-    }, []);
+        // Play or pause music based on the isMusicPlaying prop
+        if (isMusicPlaying) {
+            audioRef.current?.play();
+        } else {
+            audioRef.current?.pause();
+        }
+    }, [isMusicPlaying]);  // Trigger the effect when isMusicPlaying changes
 
     return (
         <div className={Styles["music-container"]}>
             <div className={Styles["music"]}>
-                <iframe 
-                    ref={iframeRef}
-                    width="auto" 
-                    height="auto" 
-                    src="https://www.youtube.com/embed/7EUrWoNsZVE?autoplay=1&loop=1&playlist=7EUrWoNsZVE&enablejsapi=1"  
-                    title="YouTube video player" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen 
-                />
+                <audio ref={audioRef} controls>
+                    <source src="Benediction of Dreams.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     );
