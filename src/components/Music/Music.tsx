@@ -7,7 +7,7 @@ const Music = () => {
                 <iframe 
                     width="auto" 
                     height="auto" 
-                    src="https://www.youtube.com/embed/7EUrWoNsZVE?autoplay=1&loop=1&muted=1&playlist=7EUrWoNsZVE"  
+                    src="https://www.youtube.com/embed/7EUrWoNsZVE?autoplay=1&loop=1&playlist=7EUrWoNsZVE"  
                     title="YouTube video player" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
