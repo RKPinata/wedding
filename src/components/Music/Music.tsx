@@ -26,7 +26,7 @@ const Music = () => {
                     ref={iframeRef}
                     width="auto" 
                     height="auto" 
-                    src="https://www.youtube.com/embed/7EUrWoNsZVE?autoplay=1&loop=1&playlist=7EUrWoNsZVE&mute=1&enablejsapi=1"  
+                    src="https://www.youtube.com/embed/7EUrWoNsZVE?autoplay=1&loop=1&playlist=7EUrWoNsZVE&enablejsapi=1"  
                     title="YouTube video player" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
