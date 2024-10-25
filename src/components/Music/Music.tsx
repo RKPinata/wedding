@@ -9,13 +9,12 @@ const Music: React.FC<MusicProps> = ({ isMusicPlaying }) => {
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
-        // Play or pause music based on the isMusicPlaying prop
         if (isMusicPlaying) {
             audioRef.current?.play();
         } else {
             audioRef.current?.pause();
         }
-    }, [isMusicPlaying]);  // Trigger the effect when isMusicPlaying changes
+    }, [isMusicPlaying]); 
 
     return (
         <div className={Styles["music-container"]}>
