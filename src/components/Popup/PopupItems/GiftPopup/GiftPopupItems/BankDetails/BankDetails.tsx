@@ -13,7 +13,7 @@ interface BankDetails {
 const BANK_DETAILS_DATA: BankDetails = {
     bankLogo: MaybankLogo,
     bankName: 'Maybank',
-    bearerName: 'Juraidah Binti A Rahman',
+    bearerName: 'Nurul Izzah Binti Malek',
     bankDetails: CopyableP
 }
 
@@ -33,7 +33,7 @@ const BankDetails: React.FC = () => {
                 {bankName}
             </p>
             <p>{bearerName}</p>
-            <BankDetailsComponent copyableText="bank details mama" />
+            <BankDetailsComponent copyableText="151061741754" />
         </div>
     );
 }
