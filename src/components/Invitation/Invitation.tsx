@@ -19,8 +19,8 @@ interface InvitationDataType {
 const INVITATION_DATA: InvitationDataType[] = [
   {
     bismillah: bismillahCalligraphy,
-    parentName1: 'MALEK BIN HJ SAIF',
-    parentName2: 'JURAIDAH BINTI A RAHMAN',
+    parentName1: 'EN MALEK BIN HJ SAIF',
+    parentName2: 'PN JURAIDAH BINTI A RAHMAN',
     greetingLine1: 'Assalamualaikum wbt & Salam Sejahtera',
     greetingLine2: 'Dengan penuh rasa kesyukuran, kami menjemput',
     greetingLine3: "Dato' | Datin | Tuan | Puan | Encik | Cik",
@@ -31,7 +31,7 @@ const INVITATION_DATA: InvitationDataType[] = [
 ]
 
 const Invitation: React.FC = () => {
-  const invitationData = INVITATION_DATA[0]; // Assuming we're using the first (and only) item in the array
+  const invitationData = INVITATION_DATA[0];
 
   return (
     <div className={Styles['invitation-container']}>
@@ -54,7 +54,7 @@ const Invitation: React.FC = () => {
         </div>
         <div className={Styles['couple-name']}>
           <Typography font='BP Black White'>{invitationData.name1}</Typography>
-          <Typography font='BP Black White' className={Styles["dengan-pasangannya"]}>dengan pasangannya</Typography>
+          <Typography className={Styles["dengan-pasangannya"]}>dengan pasangannya</Typography>
           <Typography font='BP Black White'>{invitationData.name2}</Typography>
         </div>
       </div>
