@@ -61,9 +61,6 @@ const CardContent: React.FC<CardContentProps> = ({ isMusicPlaying }) => {
                 <div className={`${Styles["info-wrapper"]} ${Styles["content-item"]} ${Styles["initially-hidden"]}`}>
                     <Info />
                 </div>
-                <div className={`${Styles["tentative-wrapper"]} ${Styles["content-item"]} ${Styles["initially-hidden"]}`}>
-                    <Tentative />
-                </div>
                 <div className={`${Styles["doa-wrapper"]} ${Styles["content-item"]} ${Styles["initially-hidden"]}`}>
                     <Doa />
                 </div>

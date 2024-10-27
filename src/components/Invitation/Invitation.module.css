@@ -30,12 +30,11 @@
 .couple-name {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    line-height: 2.7rem;
+    line-height: 2.78rem;
 }
 
-.dengan-pasangannya{
-    /* margin-top: 0.8rem;
-    margin-bottom: 1rem; */
+.couple-name p:nth-child(3) {
+    padding-top: 3%;
 }
 
 .location,

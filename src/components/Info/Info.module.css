@@ -1,18 +1,29 @@
-.location,
+/* .location,
 .date,
 .time {
     margin-bottom: 1rem;
-}
+} */
+
+
+
 .info-container {
     text-align: center;
     color: var(--gray-dark);
     word-spacing: 2px;
     padding: 1rem;
     margin: 0 3rem;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("../../assets/images/flower-wreath-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 20px;
+    /* border-radius: 20px;
     box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.2),
         inset -3px -3px 5px rgba(0, 0, 0, 0.2),
         3px 3px 5px rgba(255, 255, 255, 0.8),
         -3px -3px 5px rgba(255, 255, 255, 0.8);
-    background-color: var(--soft-lilac);
+    background-color: var(--soft-lilac); */
 }

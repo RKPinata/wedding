@@ -54,7 +54,7 @@ const Invitation: React.FC = () => {
         </div>
         <div className={Styles['couple-name']}>
           <Typography font='BP Black White'>{invitationData.name1}</Typography>
-          <Typography className={Styles["dengan-pasangannya"]}>dengan pasangannya</Typography>
+          <Typography>dengan pasangannya</Typography>
           <Typography font='BP Black White'>{invitationData.name2}</Typography>
         </div>
       </div>
