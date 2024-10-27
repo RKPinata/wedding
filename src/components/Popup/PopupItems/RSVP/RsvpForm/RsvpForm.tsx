@@ -6,6 +6,7 @@ import { supabase } from '@/utils/supabaseClient';
 interface RsvpFormProps {
     isAttending: boolean | null;
     onCancel: () => void;
+    onClose: () => void;
 }
 
 // Define the shape of our state
@@ -50,7 +51,7 @@ const formReducer = (state: RsvpFormState, action: Action): RsvpFormState => {
     }
 };
 
-const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel }) => {
+const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel, onClose }) => {
     const [state, dispatch] = useReducer(formReducer, initialState);
     const { name, totalAttendance, message, isSubmitting } = state;
 
@@ -74,6 +75,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel }) => {
 
             console.log('RSVP submitted successfully:', data);
             dispatch({ type: 'RESET_FORM' });
+            onClose();
         } catch (error) {
             console.error('Error submitting RSVP:', error);
         } finally {
@@ -117,7 +119,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel }) => {
                 />
             </div>
             <div className={Styles["buttons-container"]}>
-                <PrimaryButton text="Submit" type="submit" disabled={isSubmitting} />
+                <PrimaryButton text="Submit" type="submit" disabled={isSubmitting}/>
                 <PrimaryButton text="Cancel" onClick={onCancel} disabled={isSubmitting} />
             </div>
         </form>

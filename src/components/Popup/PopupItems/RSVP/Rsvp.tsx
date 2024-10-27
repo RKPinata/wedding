@@ -4,7 +4,11 @@ import Styles from "./Rsvp.module.css";
 import RsvpForm from "./RsvpForm/RsvpForm";
 import PrimaryButton from '@/components/PrimaryButton/PrimaryButton';
 
-const Rsvp: React.FC = () => {
+interface RsvpProps {
+  onClose: () => void;
+}
+
+const Rsvp: React.FC<RsvpProps> = ({ onClose }) => {
   const [isAttending, setIsAttending] = useState<boolean | null>(null);
   const [showForm, setShowForm] = useState(false);
 
@@ -29,10 +33,14 @@ const Rsvp: React.FC = () => {
           />
         </div>
       ) : (
-        <RsvpForm isAttending={isAttending} onCancel={() => setShowForm(false)} />
+        <RsvpForm 
+          isAttending={isAttending} 
+          onCancel={() => setShowForm(false)}
+          onClose={onClose}
+        />
       )}
     </div>
   );
 };
 
-export default Rsvp;
+export default Rsvp

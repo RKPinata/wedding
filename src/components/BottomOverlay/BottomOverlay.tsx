@@ -10,6 +10,10 @@ import Rsvp from '../Popup/PopupItems/RSVP/Rsvp';
 const BottomOverlay = () => {
   const [openPopup, setOpenPopup] = useState<string | null>(null);
 
+  const handleClose = () => {
+    setOpenPopup(null);
+  };
+
   const handleSelect = (title: string) => {
     setOpenPopup((prevTitle) => (prevTitle === title ? null : title));
   };
@@ -19,8 +23,8 @@ const BottomOverlay = () => {
       <Popup title="Contact" isOpen={openPopup === 'Contact'} component={<ContactPopup />} />
       <Popup title="Location" isOpen={openPopup === 'Location'} component={<LocationPopup />} />
       <Popup title="Gift" isOpen={openPopup === 'Gift'} component={<GiftPopup />} />
-      <Popup title="RSVP" isOpen={openPopup === 'RSVP'} component={<Rsvp />} />
-      <Tabbar onSelect={handleSelect} />
+      <Popup title="RSVP" isOpen={openPopup === 'RSVP'} component={<Rsvp onClose={handleClose} />} />
+      <Tabbar onSelect={handleSelect} onClose={handleClose} />
     </div>
   );
 };
