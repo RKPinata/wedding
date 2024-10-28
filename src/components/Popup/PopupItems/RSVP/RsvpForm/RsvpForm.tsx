@@ -120,7 +120,11 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel, onClose }) =
                 />
             </div>
             <div className={Styles["buttons-container"]}>
-                <PrimaryButton text="Submit" type="submit" disabled={isSubmitting} onClick={() => toast('Thank you for your wishes 🥰')}/>
+                <PrimaryButton 
+                    text="Submit" 
+                    type="submit"
+                    disabled={isSubmitting} 
+                    onClick={() => toast('Thank you for your wishes 🥰')}/>
                 <PrimaryButton text="Cancel" onClick={onCancel} disabled={isSubmitting} />
             </div>
         </form>
