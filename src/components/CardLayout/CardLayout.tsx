@@ -6,6 +6,7 @@ import CardContent from "../CardContent/CardContent";
 import monogram from '@/assets/images/monogram.png';
 import Image from "next/image";
 import Typography from "../Typography/Typography";
+import Notif from '../Notif/Notif';
 
 const CardLayout: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

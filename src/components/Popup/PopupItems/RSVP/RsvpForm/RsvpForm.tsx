@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import Styles from './RsvpForm.module.css'
 import PrimaryButton from '@/components/PrimaryButton/PrimaryButton';
 import { supabase } from '@/utils/supabaseClient';
+import { toast } from 'sonner';
 
 interface RsvpFormProps {
     isAttending: boolean | null;
@@ -119,7 +120,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ isAttending, onCancel, onClose }) =
                 />
             </div>
             <div className={Styles["buttons-container"]}>
-                <PrimaryButton text="Submit" type="submit" disabled={isSubmitting}/>
+                <PrimaryButton text="Submit" type="submit" disabled={isSubmitting} onClick={() => toast('Thank you for your wishes 🥰')}/>
                 <PrimaryButton text="Cancel" onClick={onCancel} disabled={isSubmitting} />
             </div>
         </form>
