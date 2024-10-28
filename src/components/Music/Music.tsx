@@ -19,7 +19,7 @@ const Music: React.FC<MusicProps> = ({ isMusicPlaying }) => {
     return (
         <div className={Styles["music-container"]}>
             <div className={Styles["music"]}>
-                <audio ref={audioRef} controls>
+                <audio ref={audioRef} controls loop>
                     <source src="Benediction of Dreams.mp3" type="audio/mpeg" />
                     Your browser does not support the audio element.
                 </audio>
