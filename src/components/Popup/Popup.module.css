@@ -1,22 +1,19 @@
 @keyframes slideIn {
     from {
         transform: translateY(270px);
-        opacity: 1;
     }
     to {
         transform: translateY(-100px);
-        opacity: 1;
     }
 }
 
 @keyframes slideOut {
     from {
         transform: translateY(-100px);
-        opacity: 1;
     }
     to {
         transform: translateY(270px);
-        opacity: 1;
+
     }
 }
 
