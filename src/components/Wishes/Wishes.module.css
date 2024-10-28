@@ -5,14 +5,14 @@
 
 .wishes-area {
     margin: 0 2rem;
-    height: auto;
+    max-height: 350px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 .wishes-area::-webkit-scrollbar { 
-    display: none;
+    display: thin;
 }
 
 .wish-items {

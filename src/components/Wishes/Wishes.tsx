@@ -21,35 +21,49 @@ const Wishes: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        const fetchMessages = async () => {
-            try {
-                const { data, error } = await supabase
-                    .from('rsvp_and_wishes')
-                    .select('name, message');
+    const fetchMessages = async () => {
+        try {
+            const { data, error } = await supabase
+                .from('rsvp_and_wishes')
+                .select('name, message');
 
-                if (error) throw error;
+            if (error) throw error;
 
-                setMessages(data || []);
-            } catch (error: unknown) {
-                // Type guard to handle different error types
-                if (error instanceof Error) {
-                    console.error('Error fetching messages:', error.message);
-                    setError(error.message);
-                } else if (typeof error === 'object' && error !== null) {
-                    const supabaseError = error as SupabaseError;
-                    console.error('Supabase error:', supabaseError.message);
-                    setError(supabaseError.message);
-                } else {
-                    console.error('Unknown error occurred');
-                    setError('An unknown error occurred');
-                }
-            } finally {
-                setLoading(false);
+            setMessages(data || []);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error('Error fetching messages:', error.message);
+                setError(error.message);
+            } else if (typeof error === 'object' && error !== null) {
+                const supabaseError = error as SupabaseError;
+                console.error('Supabase error:', supabaseError.message);
+                setError(supabaseError.message);
+            } else {
+                console.error('Unknown error occurred');
+                setError('An unknown error occurred');
             }
-        };
+        } finally {
+            setLoading(false);
+        }
+    };
 
+    useEffect(() => {
+        // Fetch initial messages
         fetchMessages();
+
+        // Set up real-time subscription
+        const subscription = supabase
+            .channel('rsvp_and_wishes')
+            .on('postgres_changes', { event: '*', schema: 'public', table: 'rsvp_and_wishes' }, payload => {
+                console.log('Change received!', payload);
+                fetchMessages(); // Fetch the latest messages on any change
+            })
+            .subscribe();
+
+        // Clean up the subscription on component unmount
+        return () => {
+            supabase.removeChannel(subscription);
+        };
     }, []);
 
     if (loading) return <div>Loading wishes...</div>;
