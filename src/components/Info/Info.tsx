@@ -1,4 +1,5 @@
 import Styles from './Info.module.css'
+
 interface InfoDataType {
   addressLine1: string;
   addressLine2?: string;
@@ -38,10 +39,10 @@ const Info: React.FC = () => {
       </div>
       <div className={Styles["ketibaan-tetamu"]}>
         <h3>Ketibaan Pengantin</h3>
-        <p>12.00 Tengah Hari</p>
+        <p>12.00 Tengahari</p>
       </div><div className={Styles["ketibaan-tetamu"]}>
         <h3>Majlis Berakhir</h3>
-        <p>11.00 Petang</p>
+        <p>4.00 Petang</p>
       </div>
     </div>
   )
