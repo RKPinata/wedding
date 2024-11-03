@@ -19,7 +19,7 @@ const WELCOME_DATA: WelcomeData[] = [
         eventType: 'WALIMATULURUS',
         name1: 'I Z Z A H',
         name2: 'R Y A N',
-        date: '11 . 01 . 2025',
+        date: '11.01.2025',
         day: 'SABTU',
         addressLine1: "DEWAN IBU'KU ALIMAH",
         addressLine2: 'TAMAN KLUANG PERDANA',
