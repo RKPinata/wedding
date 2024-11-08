@@ -35,14 +35,14 @@ const Info: React.FC = () => {
       </div>
       <div className={Styles["ketibaan-tetamu"]}>
         <h3>Ketibaan Tetamu</h3>
-        <p>11.00 Pagi</p>
+        <p>12.00pm</p>
       </div>
       <div className={Styles["ketibaan-tetamu"]}>
         <h3>Ketibaan Pengantin</h3>
-        <p>12.00 Tengahari</p>
+        <p>1.30pm</p>
       </div><div className={Styles["ketibaan-tetamu"]}>
         <h3>Majlis Berakhir</h3>
-        <p>4.00 Petang</p>
+        <p>4.00pm</p>
       </div>
     </div>
   )
